@@ -313,7 +313,7 @@ body {
 /****************************************************************************************/
 /* عناصر تشرب ولا تاكل */
 
-.carousel1, .carousel {
+.carousel {
     border: 2px solid var(--darkGreyColor);
     padding-top: 10px;
     border-radius: 10px;
@@ -325,11 +325,11 @@ body {
     align-items: center;
     overflow: hidden;
 }
-.carousel1-images, .carousel-images {
+.carousel-images {
     display: flex;
     transition: transform 0.5s ease;
 }
-.carousel1-item, .carousel-item {
+.carousel-item {
     min-width: 33.33%;
     text-align: center;
     margin-left: 3px;
@@ -340,54 +340,38 @@ body {
     margin-bottom: 0;
     transition: transform 0.5s ease, max-height 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
-.carousel1-item:nth-child(1), .carousel-item:nth-child(1) { animation-delay: 0.1s; }
-.carousel1-item:nth-child(2), .carousel-item:nth-child(2) { animation-delay: 0.2s; }
-.carousel1-item:nth-child(3), .carousel-item:nth-child(3) { animation-delay: 0.3s; }
-.carousel1-item:nth-child(4), .carousel-item:nth-child(4) { animation-delay: 0.4s; }
-.carousel1-item:nth-child(5), .carousel-item:nth-child(5) { animation-delay: 0.5s; }
-.hide-item {
-    animation: collapseHeight 1.5s ease-in-out;
-    animation-fill-mode: forwards;
-}
-.carousel1-item img, .carousel-item img {
+ .carousel-item:nth-child(1) { animation-delay: 0.1s; }
+ .carousel-item:nth-child(2) { animation-delay: 0.2s; }
+ .carousel-item:nth-child(3) { animation-delay: 0.3s; }
+ .carousel-item:nth-child(4) { animation-delay: 0.4s; }
+ .carousel-item:nth-child(5) { animation-delay: 0.5s; }
+
+.carousel-item img {
     width: 95%;
     border-radius: 15px;
     display: block;
     transition: transform 0.5s ease, border-radius 1s ease, box-shadow 2s ease;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
-.carousel1-item.active img, .carousel-item.active img {
+ .carousel-item.active img {
     transform: scale(0.9);
     box-shadow: 0 0 20px 5px rgb(255, 214, 143);
 }
-.carousel1-item img.small, .carousel-item img.small {
+.carousel-item img.small {
     transform: scale(0.7);
     border-radius: 50px;
 }
-.carousel1-item p, .carousel-item p {
+ .carousel-item p {
     font-size: 30px;
     margin-top: 0;
     margin-right: 7px; 
     color: var(--whiteHeader);
     text-decoration: none;
 }
-.carousel1-item a, .carousel-item a {
+ .carousel-item a {
     text-decoration: none;
 }
-@keyframes expandHeight {
-    from { max-height: 0; opacity: 0; }
-    to { max-height: 500px; opacity: 1; }
-}
-@keyframes collapseHeight {
-    from { max-height: 500px; opacity: 1; }
-    to { max-height: 0; opacity: 0; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.hidden { display: none; }
-.fade-in { animation: fadeIn 0.5s forwards; }
+
 
 /****************************************************************************************/
 /****************************************************************************************/
@@ -2115,15 +2099,6 @@ hr {
 
     
 
-    .carousel1 {
-        padding-top: 10px;
-        border-radius: 10px;
-        background-color: var(--softGreenColor);
-        position: relative;
-        height: 100%; 
-        display: flex;
-
-    }
 
     .carousel {
         padding-top: 10px;
@@ -2132,15 +2107,6 @@ hr {
         position: relative;
         height: 100%; 
         display: flex;
-    }
-
-    
-    .carousel1-item p {
-        font-size: 12px;
-        margin-top: 1px;
-        color: var(--whiteHeader);
-        text-decoration: none;
-
     }
 
     .carousel-item p {
@@ -2209,10 +2175,7 @@ hr {
 
 @media screen and (max-width:700px) {
 
-
-
-    
-    
+ 
     /* إخفاء النصوص تماماً */
     .text-right,
     .text-left {

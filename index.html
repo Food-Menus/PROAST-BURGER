@@ -34,7 +34,7 @@
 <!--*************************************************************************************************-->
 <!--section-->
 <section>
-
+    <!----------------------------->
         <div class="main-highlight2">
 
 
@@ -51,85 +51,57 @@
         </div>
     <!----------------------------->
 
-        <div class="total-menus">
-          
-            <div class="main-highlight" id="lll">
-                <div style="position: relative;">
-                    <video id="myVideo" style="border-radius: 10px;" width="100%" height="100%" autoplay muted loop >
-                        <source src="./Static/video/video .mp4" type="video/mp4">
-                    </video>
-                    <button id="muteButton" style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer; ">
-                        <img id="muteIcon" src="./Static/images/اساسيات/volume-mute.png" alt="Mute/Unmute">
-                    </button>
-                </div>     
+        <div class="main-highlight" id="lll">
+            <div style="position: relative;">
+                <video id="myVideo" style="border-radius: 10px;" width="100%" height="100%" autoplay muted loop >
+                    <source src="./Static/video/video .mp4" type="video/mp4">
+                </video>
+                <button id="muteButton" style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer; ">
+                    <img id="muteIcon" src="./Static/images/اساسيات/volume-mute.png" alt="Mute/Unmute">
+                </button>
+            </div>     
+        </div>
+    <!----------------------------->
+
+        <div class="main-highlight">
+
+            <div class="main-header"
+                style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px; margin-left: 10px;  font-weight: bold; font-size: 30px;">
+                <p class="main-title"> تحب اية دلوقتي؟ </p>
             </div>
 
-            <div class="main-highlight">
+            <div class="carousel" id="carousel">
+                <div class="carousel-images">
 
-                <div class="main-header"  style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px; margin-left: 10px;  font-weight: bold; font-size: 30px;">
-                    <p class="main-title" >  تحب اية دلوقتي؟ </p>
-                </div>
-                
-                <div class="button-container" >
-                    <a href="#lll" style="text-decoration: none;"><button onclick="showCarousel1('carousel1')" style="background-color: #FF7F50 ; color: aliceblue;  font-weight: bold; font-size: 30px;">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path></svg> تاكل  </button></a>
-                    <a href="#lll" style="text-decoration: none;"><button onclick="showCarousel('carousel')" style="background-color: #00BFFF ; color: aliceblue;  font-weight: bold; font-size: 30px;">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M11 19V13.8889L3 5V3H21V5L13 13.8889V19H18V21H6V19H11ZM7.49073 7H16.5093L18.3093 5H5.69072L7.49073 7ZM9.29072 9L12 12.0103L14.7093 9H9.29072Z"></path></svg> تشرب  </button></a>
-                </div>
-
-                <div class="carousel1" id="carousel1" style="display: none;">
-                    <div class="carousel1-images" >
-                        <div class="carousel1-item" >
-                            <a  href="./Front-end/Menus/Wgbat.html">
-                            <img src="./Static/images/ايكون القوائم/111.jpg"  alt="  999" class="active">
-                            <p>وجبات</p></a>
-                        </div>
-                        <div class="carousel1-item">
-                            <a href="./Front-end/Menus/Twagen.html">
-                            <img src="./Static/images/ايكون القوائم/222.jpg" alt="وصف الصورة 4" class="small">
-                            <p> طواجن</p></a>
-                        </div>
-                        <div class="carousel1-item">
-                            <a href="./Front-end/Menus/Swany.html">
-                            <img src="./Static/images/ايكون القوائم/444.jpg" alt="وصف الصورة 2" class="small">
-                            <p>صواني</p></a>
-                        </div>
-                        <div class="carousel1-item">
-                            <a href="./Front-end/Menus/Moqaplat.html" >
-                            <img src="./Static/images/ايكون القوائم/333.jpg" alt="وصف الصورة 3" class="small">
-                            <p> مقبلات</p></a>
-                        </div>
+                    <div class="carousel-item">
+                        <a href="./Front-end/Menus/HotD.html">
+                            <img src="./Static/images/ايكون القوائم/1111.jpg" alt="وصف الصورة 1" class="active">
+                            <p> سخن </p>
+                        </a>
                     </div>
-                </div> 
 
-                <div class="carousel" id="carousel" style="display: none;" >
-                    <div class="carousel-images">
-
-                        <div class="carousel-item" >
-                            <a  href="./Front-end/Menus/HotD.html">
-                            <img src="./Static/images/ايكون القوائم/1111.jpg"  alt="وصف الصورة 1" class="active">
-                            <p>  سخن  </p></a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="./Front-end/Menus/Frish.html">
+                    <div class="carousel-item">
+                        <a href="./Front-end/Menus/Frish.html">
                             <img src="./Static/images/ايكون القوائم/4444.jpg" alt="وصف الصورة 2" class="small">
-                            <p>  فريش  </p></a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="./Front-end/Menus/helw.html" >
-                            <img src="./Static/images/ايكون القوائم/3333.jpg" alt="وصف الصورة 3" class="small">
-                            <p>  حلو  </p></a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="./Front-end/Menus/Various_drinks.html">
-                            <img src="./Static/images/ايكون القوائم/2222.jpg" alt="وصف الصورة 4" class="small">
-                            <p>  مشروبات متنوعة  </p></a>
-                        </div>
-
+                            <p> فريش </p>
+                        </a>
                     </div>
-                </div> 
 
+                    <div class="carousel-item">
+                        <a href="./Front-end/Menus/helw.html">
+                            <img src="./Static/images/ايكون القوائم/3333.jpg" alt="وصف الصورة 3" class="small">
+                            <p> حلو </p>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="./Front-end/Menus/Various_drinks.html">
+                            <img src="./Static/images/ايكون القوائم/2222.jpg" alt="وصف الصورة 4" class="small">
+                            <p> مشروبات متنوعة </p>
+                        </a>
+                    </div>
+
+                </div>
             </div>
 
         </div>
@@ -272,29 +244,11 @@
         
     //**********************************************************************************************//
     //**********************************************************************************************//
-    //**  carousel1  **//
+    //**  carousel-item **//
 
-        let currentIndex = 0; // بدأ من الصورة الأولى
-        const items1 = document.querySelectorAll('.carousel1-item');
+        let currentIndex = 0;
         const items = document.querySelectorAll('.carousel-item');
 
-        function updateCarousel1() {
-            items1.forEach((item, index) => {
-                const img = item.querySelector('img');
-                item.classList.remove('active');
-                img.classList.remove('small');
-
-                if (index === currentIndex) {
-                    item.classList.add('active');
-                } else if (index === (currentIndex + 1) % items1.length || index === (currentIndex + 2) % items1.length) {
-                    img.classList.add('small');
-                }
-            });
-
-            // تحريك الكاروسيل
-            const newTransform = -currentIndex * 33.33; // حساب التحرك
-            document.querySelector('.carousel1-images').style.transform = `translateX(${newTransform}%)`;
-        }
 
         function updateCarousel() {
             items.forEach((item, index) => {
@@ -318,34 +272,6 @@
         let startX;
         let moveX;
         let isMoving = false;
-
-        document.getElementById('carousel1').addEventListener('touchstart', (event) => {
-            startX = event.touches[0].clientX;
-            isMoving = true;
-        });
-
-        document.getElementById('carousel1').addEventListener('touchmove', (event) => {
-            if (isMoving) {
-                moveX = event.touches[0].clientX;
-                const diffX = startX - moveX;
-
-                if (Math.abs(diffX) > 50) {
-                    isMoving = false;
-
-                    if (diffX > 0 && currentIndex < items1.length - 1) {
-                        currentIndex++; // تمرير لليسار
-                    } else if (diffX < 0 && currentIndex > 0) {
-                        currentIndex--; // تمرير لليمين
-                    }
-                    updateCarousel1();
-                }
-            }
-        });
-
-        document.getElementById('carousel1').addEventListener('touchend', () => {
-            isMoving = false; // إعادة تعيين
-        });
-
 
 
         document.getElementById('carousel').addEventListener('touchstart', (event) => {
@@ -376,16 +302,6 @@
         });
 
 
-        // التحكم بالأسهم
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowRight' && currentIndex < items1.length - 1) {
-                currentIndex++; // تمرير لليسار
-                updateCarousel1();
-            } else if (event.key === 'ArrowLeft' && currentIndex > 0) {
-                currentIndex--; // تمرير لليمين
-                updateCarousel1();
-            }
-        });
 
         document.addEventListener('keydown', (event) => {
             if (event.key === 'ArrowRight' && currentIndex < items.length - 1) {
@@ -398,7 +314,6 @@
         });
 
         // تحديث الكاروسيل عند التحميل
-        updateCarousel1();
         updateCarousel();
 
     //**********************************************************************************************//
@@ -433,34 +348,6 @@
         marqueeContent.style.animationDuration = `${animationDuration}s`;
 
 
-    //**********************************************************************************************//
-    //**********************************************************************************************//
-    //**  change carousel  **//
-
-        function showCarousel1(carousel1Id) {
-            const carouselToHide = document.querySelector('.carousel');
-            const carouselToHide1 = document.querySelector('.carousel1');
-
-            if (carouselToHide) {
-                carouselToHide.style.display = 'none'; // إخفاء الكاروسيل الآخر
-            }
-
-            const carouselToShow1 = document.getElementById(carousel1Id);
-            carouselToShow1.style.display = 'block'; // إظهار الكاروسيل الحالي
-        }
-
-        function showCarousel(carouselId) {
-            const carouselToHide1 = document.querySelector('.carousel1');
-            const carouselToHide = document.querySelector('.carousel');
-
-            if (carouselToHide1) {
-                carouselToHide1.style.display = 'none'; // إخفاء الكاروسيل الآخر
-            }
-
-            const carouselToShow = document.getElementById(carouselId);
-            carouselToShow.style.display = 'block'; // إظهار الكاروسيل الحالي
-        }
-        
     //**********************************************************************************************//
     //**********************************************************************************************//
     //**  copyButton  **//
