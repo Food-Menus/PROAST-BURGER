@@ -1,36 +1,35 @@
 @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Kufi+Arabic:wght@100..900&display=swap);
 
-/* splash-screen */
     /* animation: move 60s linear infinite ; */
-    /* main-highlight */
-    /* carousel */
-    /* main-title */
-    /* card-content */
     /* destination__details */
-    /* .sidebar.active  */
-    /* profile menu-item*/
     /* menu-toggle user img*/
+    /* profile menu-item  */
     /* destination__grid */
+    /* .sidebar.active  */
+    /* main-highlight  */
+    /* splash-screen  */
     /* journey__card */
-    /* img */
+    /* card-content */
+    /* main-title  */
+    /* carousel   */
+    /* img       */
+
 html {
     scroll-behavior: smooth; /* يجعل التمرير سلسًا */
 }
 
 :root {
     --primaryColor: #ffffff;
-    --seconderyColor: #647953;
-    --whiteColor: #647953;
+    --seconderyColor: #e21f27;
+    --whiteColor: #e21f27;
     --blackColor: #fff;
-    --softGreenColor: #e6ffd1;
+    --softGreenColor: #febf10;
     --darkGreyColor: #3b3b3b;
     --greyColor: #3a3a3a;
     --whiteHeader: #3a3a3a;
     --marquee: #fff;
-    --filter-icon: #647953;
+    --filter-icon: #e21f27;
 }
-/* marquee-content */
-/* main-header */
 
 * {
     margin: 0;
@@ -46,6 +45,10 @@ body {
     display: flex;
     background-color: var(--softGreenColor)
 }
+
+/****************************************************************************************/
+/****************************************************************************************/
+/* sidebar */
 
 .sidebar {
     height: 100%;
@@ -97,12 +100,9 @@ body {
     left: 0;
 }
 
-
-
-
-
-
-
+/****************************************************************************************/
+/****************************************************************************************/
+/* background */
 
 
 .main {
@@ -114,7 +114,7 @@ body {
     padding-left: 2%;
 
 
-    /* background-color: var(--softGreenColor) */
+    background-color: var(--softGreenColor) ;
 
     /* background: repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 10px, #e0e0e0 10px, #e0e0e0 20px); */
 
@@ -124,16 +124,15 @@ body {
 
     /* background-image: url("your-pattern-image.png"); 
     background-repeat: repeat;  */
+/* 
+    background-color: rgba(0, 0, 0, 0.5); 
 
-    background-color: rgba(0, 0, 0, 0.5); /* خلفية سوداء نصف شفافة */
-
-    background-image: url("./images/اساسيات/backgraund.png"); /* استبدل your-pattern-image.png بمسار صورتك */
+    background-image: url("./images/اساسيات/backgraund.png"); 
     background-repeat: repeat;
-    animation: moveBackground 70s linear infinite; /* تشغيل الحركة */
+    animation: moveBackground 70s linear infinite;  */
 
     margin-left: 250px
 }
-
 
 @keyframes moveBackground {
     0% {
@@ -144,28 +143,46 @@ body {
     }
 }
 
+/****************************************************************************************/
+/****************************************************************************************/
+/* navbar */
+
 .main-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center
 }
-.img {
-    width: 450px;
+.img-container {
     display: flex;
-    padding: 25px;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--primaryColor);
     border-radius: 50px;
-    border: 2px solid var(--whiteColor);
+    padding: 20px;
+    gap: 5px; /* المسافة بين العناصر */
 }
-
-.img img {
-    width: 430px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: none
+.text-right {
+    color: var(--softGreenColor);
+    font-size: 60px;
+    text-align: right;
+    font-weight: bold;
+    flex: 1;
 }
-
+.text-left {
+    color: var(--softGreenColor);
+    font-size: 60px;
+    text-align: right;
+    font-weight: bold;
+    flex: 1;
+}
+.image-center {
+    flex: 0 0 auto; /* لا يتمدد ولا ينكمش */
+}
+.image-center img {
+    max-width: 300px; /* يمكن تعديل حجم الصورة */
+    height: auto;
+    display: block;
+}
 .profile {
     display: flex;
     align-items: center;
@@ -197,6 +214,12 @@ body {
     margin-top: 50px;
     display: block
 }
+
+
+/****************************************************************************************/
+/****************************************************************************************/
+/* عناصر المنيو */
+
 
 
 .main-highlight {
@@ -257,9 +280,9 @@ body {
 }
 
 
-
-
-
+/****************************************************************************************/
+/****************************************************************************************/
+/* navbar */
 
 
 /* أنيميشن لزيادة الطول تدريجيًا */
@@ -286,48 +309,89 @@ body {
     }
 }
  
+/****************************************************************************************/
+/****************************************************************************************/
+/* عناصر تشرب ولا تاكل */
 
+.carousel1, .carousel {
+    border: 2px solid var(--darkGreyColor);
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: var(--softGreenColor);
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.carousel1-images, .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
 .carousel1-item, .carousel-item {
+    min-width: 33.33%;
+    text-align: center;
+    margin-left: 3px;
     animation: expandHeight 1s ease-in-out;
     animation-fill-mode: forwards;
-    opacity: 0; 
-    max-height: 0; 
-    margin-bottom: 0px; 
-    transition: max-height 1.5s ease-in-out, opacity 1.5s ease-in-out; 
-
-} 
-
-.carousel1-item:nth-child(1), .carousel-item:nth-child(1) {
-    animation-delay: 0.1s;
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
+    transition: transform 0.5s ease, max-height 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
-.carousel1-item:nth-child(2), .carousel-item:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.carousel1-item:nth-child(3), .carousel-item:nth-child(3) {
-    animation-delay: 0.3s;
-}
-.carousel1-item:nth-child(4), .carousel-item:nth-child(4) {
-    animation-delay: 0.4s;
-}
-.carousel1-item:nth-child(5), .carousel-item:nth-child(5) {
-    animation-delay: 0.5s;
-} 
-
+.carousel1-item:nth-child(1), .carousel-item:nth-child(1) { animation-delay: 0.1s; }
+.carousel1-item:nth-child(2), .carousel-item:nth-child(2) { animation-delay: 0.2s; }
+.carousel1-item:nth-child(3), .carousel-item:nth-child(3) { animation-delay: 0.3s; }
+.carousel1-item:nth-child(4), .carousel-item:nth-child(4) { animation-delay: 0.4s; }
+.carousel1-item:nth-child(5), .carousel-item:nth-child(5) { animation-delay: 0.5s; }
 .hide-item {
     animation: collapseHeight 1.5s ease-in-out;
     animation-fill-mode: forwards;
-} 
+}
+.carousel1-item img, .carousel-item img {
+    width: 95%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s ease, border-radius 1s ease, box-shadow 2s ease;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+.carousel1-item.active img, .carousel-item.active img {
+    transform: scale(0.9);
+    box-shadow: 0 0 20px 5px rgb(255, 214, 143);
+}
+.carousel1-item img.small, .carousel-item img.small {
+    transform: scale(0.7);
+    border-radius: 50px;
+}
+.carousel1-item p, .carousel-item p {
+    font-size: 30px;
+    margin-top: 0;
+    margin-right: 7px; 
+    color: var(--whiteHeader);
+    text-decoration: none;
+}
+.carousel1-item a, .carousel-item a {
+    text-decoration: none;
+}
+@keyframes expandHeight {
+    from { max-height: 0; opacity: 0; }
+    to { max-height: 500px; opacity: 1; }
+}
+@keyframes collapseHeight {
+    from { max-height: 500px; opacity: 1; }
+    to { max-height: 0; opacity: 0; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.hidden { display: none; }
+.fade-in { animation: fadeIn 0.5s forwards; }
 
-
-
-
-
-
-
-
-
-
-
+/****************************************************************************************/
+/****************************************************************************************/
+/* highlight */
 
 #muteIcon {
     width: 25px; /* تغيير العرض إلى 25 بكسل */
@@ -430,14 +494,18 @@ body {
     color: var(--primaryColor)
 }
 
-.filter-wrapper {
+/****************************************************************************************/
+/****************************************************************************************/
+/* filter */
+
+/*
+ .filter-wrapper {
     display: flex;
     justify-content: flex-start;
     overflow-x: hidden;
     width: 100%;
     height: 350px;
     gap: 2.7rem;
-
 }
 
 .filter-wrapper a {
@@ -457,10 +525,6 @@ body {
     border: 1px solid var(--softGreenColor);
     font-size: 25px;
     cursor: pointer;
-    /* animation: move 60s linear infinite ; */
-    /* animation: move 60s linear infinite ; */
-
-
 }
 
 .filter-icon {
@@ -473,7 +537,6 @@ body {
     background-color: var(--softGreenColor);
     color: var(--filter-icon);
     border-radius: 10px;
-
 }
 
 .filter-card:hover {
@@ -491,7 +554,11 @@ body {
     background-color: var(--primaryColor);
     border: none;
     margin: 10px
-}
+} */
+
+/****************************************************************************************/
+/****************************************************************************************/
+/* detail */
 
 .main-detail {
     margin: 1rem 0 1.5rem 0
@@ -586,6 +653,10 @@ img {
     width: 100%
 }
 
+/****************************************************************************************/
+/****************************************************************************************/
+/* destination */
+
 .section__description {
     color: var(--blackColor);
     line-height: 1.75rem;
@@ -663,6 +734,10 @@ img {
     color: var(--text-light)
 }
 
+/****************************************************************************************/
+/****************************************************************************************/
+/* order */
+
 .order__container h3 {
     max-width: fit-content;
     margin-inline: auto;
@@ -739,6 +814,10 @@ img {
     line-height: 1.75rem
 }
 
+/****************************************************************************************/
+/****************************************************************************************/
+/* الشريط اللي بيلف */
+
 .line {
     border-radius: 10px;
     margin-top: 15px;
@@ -757,6 +836,10 @@ img {
 .marquee p{
     color: var(--marquee)
 }
+
+/****************************************************************************************/
+/****************************************************************************************/
+/* الزراير */
 
 .myButton {
     max-width: 500px;
@@ -820,6 +903,10 @@ img {
     animation-duration: 1s
 }
 
+/****************************************************************************************/
+/****************************************************************************************/
+/* footer */
+
 .footer__bar {
     text-align: center;
     width: 100%;
@@ -858,57 +945,9 @@ img {
 }
 
 
-
-.footer__content {
-    margin-top: 1rem;
-    display: grid;
-    gap: 1rem
-}
-
-.about-img {
-    width: 40%;
-    margin-top: 30px;
-    margin-left: 30%
-}
-
-.footer__content p {
-    font-size: 40px;
-    margin: 0;
-    font-weight: 5500;
-    color: var(--white);
-    line-height: 1.75rem
-}
-
-.footer__content h2 {
-    width: 80%;
-    margin-left: 10%;
-    font-size: 50px;
-    color: var(--white)
-}
-
-.footer__content h1 {
-    font-size: 60px;
-    color: var(--white);
-    text-align: center
-}
-
-.footer__links {
-    list-style: none;
-    display: grid;
-    gap: 1rem
-}
-
-.footer__links li {
-    display: flex;
-    align-items: center;
-    gap: 0rem;
-    font-weight: 500;
-    color: var(--white)
-}
-
-.footer__links li span {
-    font-size: 1.25rem
-}
+/****************************************************************************************/
+/****************************************************************************************/
+/* footer */
 
 .icon-loc {
     font-size: 30px;
@@ -1071,6 +1110,21 @@ button {
     font-size: 40px
 }
 
+.button-container {
+    display: flex; /* استخدام الفليكس لجعل الأزرار بجانب بعض */
+    justify-content: center; /* محاذاة الأزرار في المنتصف */
+    gap: 15px; /* إضافة مسافة بين الأزرار */
+    margin: 15px 0; /* مسافة أعلى وأسفل الحاوية */
+}
+button {
+    padding: 10px 20px; /* تنسيق الأزرار */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+}
+
+/****************************************************************************************/
+/****************************************************************************************/
+/* journey */
+
 .journey__grid {
     margin-top: 0;
     display: grid;
@@ -1157,6 +1211,10 @@ button {
     color: var(--white);
 }
 
+/****************************************************************************************/
+/****************************************************************************************/
+/* event */
+
 .event__content {
     display: grid;
     gap: 2rem;
@@ -1194,227 +1252,190 @@ button {
     margin-bottom: 1rem
 }
 
+/****************************************************************************************/
+/****************************************************************************************/
+/* marqueee */
 
 
-
-
-
-
-
-
-
-
-
-
-
-.button-container {
-    display: flex; /* استخدام الفليكس لجعل الأزرار بجانب بعض */
-    justify-content: center; /* محاذاة الأزرار في المنتصف */
-    gap: 15px; /* إضافة مسافة بين الأزرار */
-    margin: 15px 0; /* مسافة أعلى وأسفل الحاوية */
+.marquee-container {
+overflow: hidden;
+width: 100%;
+white-space: nowrap;
+}
+.marquee-content {
+display: inline-block;
+animation: marquee 20s linear infinite;
+}
+.marquee-content img {
+display: inline-block;
+margin-right: 0px;
+width: 90px;
+}
+@keyframes marquee {
+0% {
+    transform: translateX(0%);
+}
+100% {
+    transform: translateX(-100%);
+}
 }
 
-button {
-    padding: 10px 20px; /* تنسيق الأزرار */
-    cursor: pointer; /* تغيير المؤشر عند التمرير */
-}
+/****************************************************************************************/
+/****************************************************************************************/
+/* form */
 
-.carousel1 {
-    border: 2px solid var(--darkGreyColor); /* إضافة الإطار */
-    padding-top: 10px;
+.form-group {
+    margin: 20px 0;
+    /* مسافة بين المجموعات */
+    justify-content: center;
+    /* تمركز المحتوى أفقياً */
+
+}
+.form-control {
+    width: 99%;
+    /* عرض كامل */
+    padding: 10px;
+    /* حشوة داخلية */
+    font-size: 16px;
+    /* حجم الخط */
+    border: 3px solid #ccc;
+    /* لون الحدود */
     border-radius: 10px;
-    background-color: var(--softGreenColor);
-    position: relative;
-    height: 100%; /* ارتفاع الكاروسيل */
-    display: flex;
-    justify-content: center; /* لتوسيط العنصر */
-    align-items: center; /* لتوسيع العنصر عموديًا */
-    overflow: hidden; /* إخفاء الصور غير المعروضة */
-}
-
-.carousel1-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel1-item {
-    min-width: 33.33%; /* عرض كل عنصر */
-    text-align: center; /* لتوسيع النص في المنتصف */
-    transition: transform 0.5s ease;
+    /* زوايا مستديرة */
+    background-color: #fff;
+    /* لون الخلفية */
+    transition: border-color 0.3s;
+    /* مؤثر انتقال لحدود اللون */
+    justify-content: center;
+    /* تمركز المحتوى أفقياً */
     margin-left: 3px;
-}
-
-.carousel1-item img {
-    width: 95%; /* عرض الصورة */
-    border-radius: 15px;
-    display: block; /* لجعل الصورة عنصر بلوك */
-    transition: transform 0.5s ease, border-radius 1s ease , box-shadow 2s ease; /* إضافة انتقال لـ border-radius */
-    box-shadow: 0 0px 20px  5px rgba(0, 0, 0, 0.5); /* إضافة الظل */
 
 }
-
-.carousel1-item.active img {
-    transform: scale(0.9); /* زيادة حجم الصورة النشطة */
-    box-shadow: 0 0px 20px  5px rgb(255, 214, 143); /* إضافة الظل */
-
+.form-control:focus {
+    border-color: #ff8800;
+    /* تغيير لون الحدود عند التركيز */
+    outline: none;
+    /* إزالة الإطار الافتراضي */
+}
+.form-control option {
+    padding: 10px;
+    /* حشوة داخلية للخيار */
 }
 
-.carousel1-item img.small {
-    transform: scale(0.7); /* حجم الصور الصغيرة */
-    border-radius: 50px;
-}
+/****************************************************************************************/
+/****************************************************************************************/
+/* card */
 
-.carousel1-item p {
-    font-size: 30px;
-    margin-top: 0px;
-    margin-right: 0px;
-    color: var(--whiteHeader);
+.data-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.card {
+    color: var(--softGreenColor);
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--whiteColor);
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+    /* إضافة هذه الخاصية لجعل النص من اليمين لليسار */
+}
+.card-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: right;
+    /* محاذاة العنوان لليمين */
+
+}
+.card-content {
+    margin-bottom: 10px;
+    text-align: right;
+    color: var(--marquee);
+    /* محاذاة المحتوى لليمين */
+}
+.card-content p {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 15px;
+    /* محاذاة المحتوى لليمين */
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.checkybox {
+
+    margin-right: 29px;
+}
+.myButton a {
+    color: #f5f5f5;
     text-decoration: none;
 
 }
 
-.carousel1-item a {
-    text-decoration: none;
-}
+/****************************************************************************************/
+/****************************************************************************************/
+/* splash */
 
-
-
-
-.carousel {
-    border: 2px solid var(--darkGreyColor); /* إضافة الإطار */
-    padding-top: 10px;
-    border-radius: 10px;
-    background-color: var(--softGreenColor);
-    position: relative;
-    height: 80%; /* ارتفاع الكاروسيل */
-    display: flex;
-    justify-content: center; /* لتوسيط العنصر */
-    align-items: center; /* لتوسيع العنصر عموديًا */
-    overflow: hidden; /* إخفاء الصور غير المعروضة */
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    min-width: 33.33%; /* عرض كل عنصر */
-    text-align: center; /* لتوسيع النص في المنتصف */
-    transition: transform 0.5s ease;
-    margin-left: 3px;
-}
-
-.carousel-item img {
-    width: 95%; /* عرض الصورة */
-    border-radius: 15px;
-    display: block; /* لجعل الصورة عنصر بلوك */
-    transition: transform 0.5s ease, border-radius 1s ease , box-shadow 2s ease; /* إضافة انتقال لـ border-radius */
-    box-shadow: 0 0px 20px  5px rgba(0, 0, 0, 0.5); /* إضافة الظل */
-
-}
-
-.carousel-item.active img {
-    transform: scale(0.9); /* زيادة حجم الصورة النشطة */
-    box-shadow: 0 0px 20px  5px rgb(255, 214, 143); /* إضافة الظل */
-
-}
-
-.carousel-item img.small {
-    transform: scale(0.7); /* حجم الصور الصغيرة */
-    border-radius: 50px;
-}
-
-.carousel-item p {
-    font-size: 30px;
-    margin-top: 0px;
-    margin-right: 7px;
-    color: var(--whiteHeader);
-    text-decoration: none;
-
-}
-
-.carousel-item a {
-    text-decoration: none;
-
-}
-
-
-
-
-
-
-
-
-.hidden {
-    display: none;
-}
-
-.fade-in {
-    animation: fadeIn 0.5s forwards;
-
-}
-
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.marqueee {
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.marqueee img {
-    display: inline-block;
+#splash-screen {
+    position: fixed;
+    /* يجعله ثابتًا في مكانه */
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    width: auto;
+    background-color: #fff;
+    /* لون الخلفية */
+    display: flex;
+    justify-content: center;
+    /* توسيط أفقي */
+    align-items: center;
+    /* توسيط رأسي */
+    z-index: 9999;
+    /* يجعله فوق جميع العناصر الأخرى */
+    opacity: 1;
+    /* اجعلها مرئية في البداية */
+    transition: opacity 3s;
+    /* تأثير تلاشي لمدة ثانية */
+    overflow: hidden;
+    /* لإخفاء أي جزء من الصورة يخرج عن الحاوية أثناء التكبير */
 
 }
-
-.marqueee-content {
-    background-size: cover;
-    animation: move 50s linear infinite alternate;
-    /* تغيير الوقت حسب الحاجة */
+#splash-screen.hidden {
+    opacity: 0;
+    /* اجعلها مخفية عند إضافة الكلاس "hidden" */
 }
-
-@keyframes move {
+#splash-screen img {
+    width: 100vw;
+    /* الحجم الأصلي للصورة */
+    animation: zoomAndFade 2s;
+    /* تشغيل تأثير zoomAndFade */
+}
+@keyframes zoomAndFade {
     100% {
-        transform: translateX(200%);
+        transform: scale(1);
+        /* ابدأ بحجم أصغر */
+        opacity: 1;
+        /* ابدأ بشفافية صفر */
     }
 
     100% {
-        transform: translateX(-200%);
+        transform: scale(1.1);
+        /* وصل إلى حجم أكبر من الحجم النهائي */
+        opacity: 1;
+        /* اجعل الصورة مرئية تماماً */
     }
 }
 
-
-
-
-
-
-
-
+/****************************************************************************************/
+/****************************************************************************************/
+/* media screen */
 
 @media screen and (max-width:1750px) {
     #overlayImage {
@@ -1457,6 +1478,8 @@ button {
 }
 
 @media screen and (max-width:1500px) {
+
+    
     .destination__grid {
         margin-top: 10px;
         display: flex;
@@ -1484,6 +1507,8 @@ button {
 }
 
 @media screen and (max-width:1350px) {
+
+    
     .destination__grid {
         margin-top: 4rem;
         display: flex;
@@ -1564,11 +1589,43 @@ button {
 }
 
 @media screen and (max-width:1000px) {
-
-
-
-
+    .img-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primaryColor);
+        border-radius: 50px;
+        padding: 2px;
+        gap: 5px; /* المسافة بين العناصر */
+    }
     
+    .text-right {
+        color: var(--softGreenColor);
+        font-size: 30px;
+        text-align: right;
+        font-weight: bold;
+        flex: 1;
+    }
+    
+    .text-left {
+        color: var(--softGreenColor);
+        font-size: 30px;
+        text-align: right;
+        font-weight: bold;
+        flex: 1;
+    }
+    
+    .image-center {
+        flex: 0 0 auto; /* لا يتمدد ولا ينكمش */
+    }
+    
+    .image-center img {
+        max-width: 200px; /* يمكن تعديل حجم الصورة */
+        height: auto;
+        display: block;
+    }
+
+
 
 .marqueee {
     margin-top: 7px;
@@ -2017,15 +2074,13 @@ button {
     }
 
     .img {
-        width: 260px;
-        padding: 15px;
+        padding: 0px;
         display: flex;
         justify-content: space-around;
         border-radius: 50px;
     }
 
     .img img {
-        width: 220px;
         border: none
     }
 }
@@ -2127,19 +2182,27 @@ button {
 }
 
 @media screen and (max-width:700px) {
-    .img {
-        width: 280px;
-        display: flex;
-        padding: 10px;
-        justify-content: space-around;
-        border-radius: 50px;
-      
-    }
 
-    .img img {
-        width: 200px;
-        border: none
+
+
+    
+    
+    /* إخفاء النصوص تماماً */
+    .text-right,
+    .text-left {
+        display: none !important;
     }
+    
+    .image-center {
+        flex: 0 0 auto;
+    }
+    
+    .image-center img {
+        max-width: 150px; /* يمكن تعديل حجم الصورة حسب الحاجة */
+        height: auto;
+        display: block;
+    }
+    
 
     .counter {
         display: inline-block;
@@ -2585,264 +2648,29 @@ button {
         box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2)
     }
 
-    .img {
-        width: 200px;
+    .img-container {
         display: flex;
-        padding: 10px;
-        justify-content: space-around;
-        border-radius: 50px;
+        justify-content: center; 
+        align-items: center;
+        background-color: var(--primaryColor);
+        border-radius: 30px;
+        padding-right: 5px;
+        padding-left: 5px;
     }
-
-    .img img {
-        width: 180px;
-        border: none
+    
+    /* إخفاء النصوص تماماً */
+    .text-right,
+    .text-left {
+        display: none !important;
     }
-}
-
-.form-group {
-    margin: 20px 0;
-    /* مسافة بين المجموعات */
-    justify-content: center;
-    /* تمركز المحتوى أفقياً */
-
-}
-
-.form-control {
-    width: 99%;
-    /* عرض كامل */
-    padding: 10px;
-    /* حشوة داخلية */
-    font-size: 16px;
-    /* حجم الخط */
-    border: 3px solid #ccc;
-    /* لون الحدود */
-    border-radius: 10px;
-    /* زوايا مستديرة */
-    background-color: #fff;
-    /* لون الخلفية */
-    transition: border-color 0.3s;
-    /* مؤثر انتقال لحدود اللون */
-    justify-content: center;
-    /* تمركز المحتوى أفقياً */
-    margin-left: 3px;
-
-}
-
-.form-control:focus {
-    border-color: #ff8800;
-    /* تغيير لون الحدود عند التركيز */
-    outline: none;
-    /* إزالة الإطار الافتراضي */
-}
-
-.form-control option {
-    padding: 10px;
-    /* حشوة داخلية للخيار */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.data-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card {
-    color: var(--softGreenColor);
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: var(--whiteColor);
-    border-radius: 30px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    direction: rtl;
-    /* إضافة هذه الخاصية لجعل النص من اليمين لليسار */
-}
-
-.card-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-align: right;
-    /* محاذاة العنوان لليمين */
-
-}
-
-.card-content {
-    margin-bottom: 10px;
-    text-align: right;
-    color: var(--marquee);
-    /* محاذاة المحتوى لليمين */
-}
-
-.card-content p {
-    margin-top: 20px;
-    text-align: right;
-    font-size: 15px;
-    /* محاذاة المحتوى لليمين */
-}
-
-
-hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-}
-
-.checkybox {
-
-    margin-right: 29px;
-}
-
-.myButton a {
-    color: #f5f5f5;
-    text-decoration: none;
-
-}
-
-
-
-
-
-
-#splash-screen {
-    position: fixed;
-    /* يجعله ثابتًا في مكانه */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    /* لون الخلفية */
-    display: flex;
-    justify-content: center;
-    /* توسيط أفقي */
-    align-items: center;
-    /* توسيط رأسي */
-    z-index: 9999;
-    /* يجعله فوق جميع العناصر الأخرى */
-    opacity: 1;
-    /* اجعلها مرئية في البداية */
-    transition: opacity 3s;
-    /* تأثير تلاشي لمدة ثانية */
-    overflow: hidden;
-    /* لإخفاء أي جزء من الصورة يخرج عن الحاوية أثناء التكبير */
-
-}
-
-#splash-screen.hidden {
-    opacity: 0;
-    /* اجعلها مخفية عند إضافة الكلاس "hidden" */
-}
-
-
-#splash-screen img {
-    width: 100vw;
-    /* الحجم الأصلي للصورة */
-    animation: zoomAndFade 2s;
-    /* تشغيل تأثير zoomAndFade */
-}
-
-
-@keyframes zoomAndFade {
-    100% {
-        transform: scale(1);
-        /* ابدأ بحجم أصغر */
-        opacity: 1;
-        /* ابدأ بشفافية صفر */
+    
+    .image-center {
+        flex: 0 0 auto;
     }
-
-    100% {
-        transform: scale(1.1);
-        /* وصل إلى حجم أكبر من الحجم النهائي */
-        opacity: 1;
-        /* اجعل الصورة مرئية تماماً */
+    
+    .image-center img {
+        max-width: 150px; /* يمكن تعديل حجم الصورة حسب الحاجة */
+        height: auto;
+        display: block;
     }
 }
-
-
-
-
-
-
-
-.marqueee {
-    margin: 0px;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.marqueee img {
-    display: inline-block;
-    /* استخدام inline-block لجعل العناصر بجانب بعضها */
-    width:  80px;
-    /* يمكن تعديل الارتفاع حسب الحاجة */
-}
-
-.marqueee-content {
-    background-size: cover;
-    animation: move 40s linear infinite ;
-    /* تغيير الوقت حسب الحاجة */
-}
-
-@keyframes move {
-    100% {
-        transform: translateX(200%);
-    }
-
-    100% {
-        transform: translateX(-200%);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-.marquee-container {
-    overflow: hidden;
-    width: 100%;
-    white-space: nowrap;
-  }
-  
-  .marquee-content {
-    display: inline-block;
-    animation: marquee 20s linear infinite;
-  }
-  
-  .marquee-content img {
-    display: inline-block;
-    margin-right: 0px;
-    width: 90px;
-  }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
