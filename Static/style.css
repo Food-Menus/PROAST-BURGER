@@ -319,7 +319,7 @@ body {
     border-radius: 10px;
     background-color: var(--softGreenColor);
     position: relative;
-    height: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -893,8 +893,11 @@ img {
 
 .footer__bar {
     text-align: center;
-    width: 100%;
-    background-color: var(--greyColor)
+    width: 90%;
+    background-color: var(--greyColor);
+    border-top-left-radius: 15px;  /* زاوية مدورة من الأعلى لليسار */
+    border-top-right-radius: 15px; /* زاوية مدورة من الأعلى لليمين */
+
 }
 
 .footer__bar p {
@@ -905,8 +908,11 @@ img {
     bottom: 0;
     width: 100%;
     background-color: var(--greyColor);
-    text-align: center
+    text-align: center;
+    border-top-left-radius: 15px;  /* زاوية مدورة من الأعلى لليسار */
+    border-top-right-radius: 15px; /* زاوية مدورة من الأعلى لليمين */
 }
+
 
 .sidebar {
     display: none
@@ -1853,16 +1859,19 @@ hr {
     }
 
     .footer__bar {
+        opacity: 60%;
         font-size: .9rem;
         color: var(--white);
         text-align: center;
-        padding-top: 2rem;
+        padding-top: 5px;
         font-size: 22px;
         left: 0;
         bottom: 0;
         width: 100%;
         background-color: var(--softGreenColor);
-        text-align: center
+        text-align: center;
+        border-top-left-radius: 15px;  /* زاوية مدورة من الأعلى لليسار */
+        border-top-right-radius: 15px; /* زاوية مدورة من الأعلى لليمين */
     }
 
     .main-header {
@@ -2295,7 +2304,6 @@ hr {
         color: var(--marquee);
         text-align: center;
         font-size: 13px;
-        padding-bottom: 10px;
         left: 0;
         bottom: 0;
         width: 100%;

@@ -29,7 +29,25 @@
 <!--*************************************************************************************************-->
 <!--*************************************************************************************************-->
 <!--navbar-->
-<div id="navbar" data-Location="./Front-end/Pages/location.html" data-imgN="./Static/images/اساسيات/logoooo.png" ></div>
+<div class="main-navbar">
+    <div class="profile">  <div class="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M5 5H13V19H5V5ZM19 19H15V5H19V19ZM4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3H4ZM7 12L11 8.5V15.5L7 12Z"></path></svg></div></div>
+    <div class="img">
+        <div class="img-container">
+            <div class="text-right">
+                <h2> بــرجــر </h2>
+            </div>
+            
+            <div class="image-center">
+                <img src="./Static/images/اساسيات/logoooo.png" alt="شعار">
+            </div>
+            
+            <div class="text-left">
+                <h2> بروست </h2>
+            </div>
+        </div>
+    </div>
+    <div class="profile"> <a href="./Front-end/Pages/location.html" class="user"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"></path></svg></a></div>
+</div>
 <!--*************************************************************************************************-->
 <!--*************************************************************************************************-->
 <!--section-->
@@ -51,59 +69,61 @@
         </div>
     <!----------------------------->
 
-        <div class="main-highlight" id="lll">
-            <div style="position: relative;">
-                <video id="myVideo" style="border-radius: 10px;" width="100%" height="100%" autoplay muted loop >
-                    <source src="./Static/video/video .mp4" type="video/mp4">
-                </video>
-                <button id="muteButton" style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer; ">
-                    <img id="muteIcon" src="./Static/images/اساسيات/volume-mute.png" alt="Mute/Unmute">
-                </button>
-            </div>     
-        </div>
-    <!----------------------------->
-
-        <div class="main-highlight">
-
-            <div class="main-header"
-                style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px; margin-left: 10px;  font-weight: bold; font-size: 30px;">
-                <p class="main-title"> تحب اية دلوقتي؟ </p>
+        <div class="total-menus">
+            <div class="main-highlight" id="lll">
+                <div style="position: relative;">
+                    <video id="myVideo" style="border-radius: 10px;" width="100%" height="100%" autoplay muted loop >
+                        <source src="./Static/video/video .mp4" type="video/mp4">
+                    </video>
+                    <button id="muteButton" style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer; ">
+                        <img id="muteIcon" src="./Static/images/اساسيات/volume-mute.png" alt="Mute/Unmute">
+                    </button>
+                </div>     
             </div>
+        <!----------------------------->
 
-            <div class="carousel" id="carousel">
-                <div class="carousel-images">
+            <div class="main-highlight">
 
-                    <div class="carousel-item">
-                        <a href="./Front-end/Menus/HotD.html">
-                            <img src="./Static/images/ايكون القوائم/1111.jpg" alt="وصف الصورة 1" class="active">
-                            <p> سخن </p>
-                        </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="./Front-end/Menus/Frish.html">
-                            <img src="./Static/images/ايكون القوائم/4444.jpg" alt="وصف الصورة 2" class="small">
-                            <p> فريش </p>
-                        </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="./Front-end/Menus/helw.html">
-                            <img src="./Static/images/ايكون القوائم/3333.jpg" alt="وصف الصورة 3" class="small">
-                            <p> حلو </p>
-                        </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="./Front-end/Menus/Various_drinks.html">
-                            <img src="./Static/images/ايكون القوائم/2222.jpg" alt="وصف الصورة 4" class="small">
-                            <p> مشروبات متنوعة </p>
-                        </a>
-                    </div>
-
+                <div class="main-header"
+                    style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px; margin-left: 10px;  font-weight: bold; font-size: 30px;">
+                    <p class="main-title"> تحب اية دلوقتي؟ </p>
                 </div>
-            </div>
 
+                <div class="carousel" id="carousel">
+                    <div class="carousel-images">
+
+                        <div class="carousel-item">
+                            <a href="./Front-end/Menus/HotD.html">
+                                <img src="./Static/images/ايكون القوائم/1111.jpg" alt="وصف الصورة 1" class="active">
+                                <p> سخن </p>
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./Front-end/Menus/Frish.html">
+                                <img src="./Static/images/ايكون القوائم/4444.jpg" alt="وصف الصورة 2" class="small">
+                                <p> فريش </p>
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./Front-end/Menus/helw.html">
+                                <img src="./Static/images/ايكون القوائم/3333.jpg" alt="وصف الصورة 3" class="small">
+                                <p> حلو </p>
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="./Front-end/Menus/Various_drinks.html">
+                                <img src="./Static/images/ايكون القوائم/2222.jpg" alt="وصف الصورة 4" class="small">
+                                <p> مشروبات متنوعة </p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> 
         </div>
     <!----------------------------->
 
@@ -187,7 +207,7 @@
     //**********************************************************************************************//
     //**  git data  **//
 
-        const base = `https://docs.google.com/spreadsheets/d/1jaYRIklHOBN7StRTNkXJ-FyqF6jmQ92DRElG103wLLw/gviz/tq?tqx=out:json`;
+    const base = `https://docs.google.com/spreadsheets/d/1VePG52eXxO4sC8naFSZmQzsN1pnocieNc5Xw7w0OtXQ/gviz/tq?tqx=out:json`;
         async function fetchDetails() {
             const response = await fetch(base);
             const data = await response.text();
@@ -245,76 +265,114 @@
     //**********************************************************************************************//
     //**********************************************************************************************//
     //**  carousel-item **//
+        
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    let startX, moveX, isMoving = false;
 
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            const img = item.querySelector('img');
+            item.classList.remove('active');
+            img.classList.remove('small');
 
+            if (index === currentIndex) {
+                item.classList.add('active');
+            } else if (index === (currentIndex + 1) % items.length || index === (currentIndex + 2) % items.length) {
+                img.classList.add('small');
+            }
+        });
 
-        function updateCarousel() {
-            items.forEach((item, index) => {
-                const img = item.querySelector('img');
-                item.classList.remove('active');
-                img.classList.remove('small');
+        // تحريك الكاروسيل
+        const newTransform = -currentIndex * 33.33;
+        document.querySelector('.carousel-images').style.transform = `translateX(${newTransform}%)`;
+    }
 
-                if (index === currentIndex) {
-                    item.classList.add('active');
-                } else if (index === (currentIndex + 1) % items.length || index === (currentIndex + 2) % items.length) {
-                    img.classList.add('small');
+    // التحكم باللمس
+    document.getElementById('carousel').addEventListener('touchstart', (event) => {
+        startX = event.touches[0].clientX;
+        isMoving = true;
+    });
+
+    document.getElementById('carousel').addEventListener('touchmove', (event) => {
+        if (isMoving) {
+            moveX = event.touches[0].clientX;
+            const diffX = startX - moveX;
+
+            if (Math.abs(diffX) > 50) {
+                isMoving = false;
+
+                if (diffX > 0 && currentIndex < items.length - 1) {
+                    currentIndex++;
+                } else if (diffX < 0 && currentIndex > 0) {
+                    currentIndex--;
                 }
-            });
-
-            // تحريك الكاروسيل
-            const newTransform = -currentIndex * 33.33; // حساب التحرك
-            document.querySelector('.carousel-images').style.transform = `translateX(${newTransform}%)`;
+                updateCarousel();
+            }
         }
+    });
 
-        // التحكم باللمس
-        let startX;
-        let moveX;
-        let isMoving = false;
+    document.getElementById('carousel').addEventListener('touchend', () => {
+        isMoving = false;
+    });
 
 
-        document.getElementById('carousel').addEventListener('touchstart', (event) => {
-            startX = event.touches[0].clientX;
-            isMoving = true;
-        });
+    // التحكم بالماوس
+    document.getElementById('carousel').addEventListener('mousedown', (event) => {
+        startX = event.clientX;
+        isMoving = true;
+        event.preventDefault(); // لمنع تحديد النص عند السحب
+    });
 
-        document.getElementById('carousel').addEventListener('touchmove', (event) => {
-            if (isMoving) {
-                moveX = event.touches[0].clientX;
-                const diffX = startX - moveX;
+    document.getElementById('carousel').addEventListener('mousemove', (event) => {
+        if (isMoving) {
+            moveX = event.clientX;
+            const diffX = startX - moveX;
 
-                if (Math.abs(diffX) > 50) {
-                    isMoving = false;
+            // إظهار تأثير السحب
+            const carouselImages = document.querySelector('.carousel-images');
+            const offset = -currentIndex * 33.33 + (diffX / 10);
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+    });
 
-                    if (diffX > 0 && currentIndex < items.length - 1) {
-                        currentIndex++; // تمرير لليسار
-                    } else if (diffX < 0 && currentIndex > 0) {
-                        currentIndex--; // تمرير لليمين
-                    }
-                    updateCarousel();
+    document.getElementById('carousel').addEventListener('mouseup', (event) => {
+        if (isMoving) {
+            moveX = event.clientX;
+            const diffX = startX - moveX;
+            
+            if (Math.abs(diffX) > 100) {
+                if (diffX > 0 && currentIndex < items.length - 1) {
+                    currentIndex++;
+                } else if (diffX < 0 && currentIndex > 0) {
+                    currentIndex--;
                 }
             }
-        });
+            updateCarousel();
+            isMoving = false;
+        }
+    });
 
-        document.getElementById('carousel').addEventListener('touchend', () => {
-            isMoving = false; // إعادة تعيين
-        });
+    document.getElementById('carousel').addEventListener('mouseleave', () => {
+        if (isMoving) {
+            updateCarousel();
+            isMoving = false;
+        }
+    });
 
+    // التحكم بالسهام
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight' && currentIndex < items.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        } else if (event.key === 'ArrowLeft' && currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
 
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowRight' && currentIndex < items.length - 1) {
-                currentIndex++; // تمرير لليسار
-                updateCarousel();
-            } else if (event.key === 'ArrowLeft' && currentIndex > 0) {
-                currentIndex--; // تمرير لليمين
-                updateCarousel();
-            }
-        });
-
-        // تحديث الكاروسيل عند التحميل
-        updateCarousel();
+    // تحديث الكاروسيل عند التحميل
+    updateCarousel();
 
     //**********************************************************************************************//
     //**********************************************************************************************//

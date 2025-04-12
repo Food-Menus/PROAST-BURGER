@@ -7,59 +7,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
     <link rel="icon" href="./../../Static/images/اساسيات/logoooo.png" type="image/x-icon">
-    <title>ُEgyptian Burger</title>
+    <title>Broast & burger</title> 
+    <style>
+    .footer__bar {
+        text-align: center;
+        width: 100%;
+        background-color: var(--greyColor);
+        position: fixed; /* يجعل الفوتر ثابتًا في أسفل الشاشة */
+        bottom: 0; /* يضع الفوتر في أسفل الشاشة */
+        width: 100%; /* يجعل الفوتر يمتد على كامل عرض الشاشة */
+    }
+    </style>
 </head>
 
 <body>
-    
-    <div class="sidebar">
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--sidebar-->
+<div id="sidebar" about="./Front-end/Pages/about.html" feedback="./Front-end/Pages/feedback.html" Profile="./Front-end/Pages/Profile.html"></div>
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--loading-->
+<div class="loading-overlay" id="loadingScreen">
+<img src="./../../Static/images/اساسيات/logoooo.png" class="loader-img" alt="Loading..."></div>
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--main--><div class="main">
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--navbar-->
+<div id="navbar" data-Location="./../../index.html" data-imgN="../../Static/images/اساسيات/logoooo.png" ></div>
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--Codes-->
 
-        <h1 class="logo" href>Egyptian Burger</h1>
-        <div class="sidebar-menus">
-            <br>
-            <br>
-            <a href="./../../index.html"><ion-icon name="home-outline"></ion-icon> القائمة الرئيسية </a>
-            <a href="https://www.facebook.com/Techno.Science.TC"><ion-icon name="logo-facebook"></ion-icon> صفحة الفيسبوك</a>
-            <a href="https://wa.me/+201147182463?text=مرحبا اريد التواصل معكم"><ion-icon name="logo-whatsapp"></ion-icon>تواصل معنا</a>
+
+    <Code>
+
+        <div class="footer__content">
+            <div>
+                <img src="./../../Static/images/اساسيات/logoooo.png" class="about-img"><br>
+                <h1 style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding-bottom: 15px; margin: 15px;">مرحبا بك </h1>
+                <ul class="footer__links">
+                <h3 class="about-content" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding: 15px;">مرحباً بك في عائلتنا وسط البلد لدينا شغف واحد: إسعادكم. نقدم لكم تجربة طعام فريدة، حيث نجمع بين المذاق اللذيذ والضيافة الحارة. نحن أكثر من مجرد كافيه نحن مكان لتجمع الأصدقاء والعائلة.
+                </h3>
+                </ul>
+            </div>
         </div>
-        <div class="menu-off">
-            <a href="#" class="menu-off" ><ion-icon name="close-outline" ></ion-icon>close</a>
-        </div>
 
-    </div>
-    <!------------------------------------------------------------>
-    <div class="main">
+    </Code>   
 
-    <div class="main-navbar">
-        <div class="profile"> <div class="menu-toggle"><ion-icon name="menu-outline" ></ion-icon></div></div>
-        <div class="img"><img  src="../../Static/images/اساسيات/logo.png"></div>
-        <div class="profile"><a class="user" href="./../../index.html"><ion-icon name="arrow-back-outline"></ion-icon></a></div>
-    </div>
-    <!------------------------------------------------------------>
 
-    <div class="footer__content">
-        <div>
-            <img src="./../../Static/images/اساسيات/logoooo.png" class="about-img"><br>
-            <h1 style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding-bottom: 15px; margin: 15px;">مرحبا بك </h1>
-            <ul class="footer__links">
-            <h3 class="about-content" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding: 15px;">مرحباً بك في عائلتنا وسط البلد لدينا شغف واحد: إسعادكم. نقدم لكم تجربة طعام فريدة، حيث نجمع بين المذاق اللذيذ والضيافة الحارة. نحن أكثر من مجرد كافيه نحن مكان لتجمع الأصدقاء والعائلة.
-            </h3>
-            </ul>
-        </div>
-    </div>
-    <!------------------------------------------------------------>
-        
-    </div>
+</div>
+<a href="./../../Front-end/Pages/order.html"><div class="counter"><span> عدد العناصر المحددة: 0 </span><ion-icon name="cart-outline" class="icon-1"></ion-icon></div></a>
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--footer--> 
+<div id="footer"></div> 
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--scripts--> 
+<script>
+    //**********************************************************************************************//
+    //**********************************************************************************************//
+    //**  loadingScreen  **//
 
-    <a href="./../../Front-end/Pages/order.html"><div class="counter"><span> عدد العناصر المحددة: 0 </span><ion-icon name="cart-outline" class="icon-1"></ion-icon></div></a>
+        // إخفاء شاشة التحميل بعد تحميل الصفحة
+        window.addEventListener('load', function() {
+            document.getElementById('loadingScreen').style.display = 'none';
+        });
 
+        // (إختياري) إخفاء الشاشة بعد وقت معين كإحتياط
+        setTimeout(function() {
+            document.getElementById('loadingScreen').style.display = 'none';
+        }, 5000); // 5 ثواني كحد أقصى
+
+</script>
+<!--*************************************************************************************************-->
+<!--*************************************************************************************************-->
+<!--liberary-->
+<script src="./../Components.js" defer></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="./../../Back-end/JavaScript.js"></script>
+<script src="./../../Back-end/script.js"></script>
+<script src="./../../Back-end/app.js"></script>    
 </body>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./../../Back-end/JavaScript.js"></script>
-    <script src="./../../Back-end/script.js"></script>
-    <script src="./../../Back-end/app.js"></script>     
+ 
 
 </html>
