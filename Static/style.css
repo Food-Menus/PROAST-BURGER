@@ -94,7 +94,6 @@ body {
     border-radius: 50px
 }
 
-
 .sidebar.active {
     display: flex;
     z-index: 10;
@@ -180,7 +179,6 @@ body {
     padding: 10px;
     
 }
-
 .user {
     display: flex;
     justify-content: center;
@@ -194,7 +192,6 @@ body {
     border: 3px solid #ffffff; /* لون ذهبي */
 
 }
-
 .menu-toggle {
     display: flex;
     justify-content: center;
@@ -208,12 +205,10 @@ body {
     border: 3px solid #ffffff; /* لون ذهبي */
 
 }
-
 .cart:hover,
 .user:hover {
     box-shadow: rgba(149, 157, 165, .2) 0 8px 24px
 }
-
 .header__image img {
     max-width: 270px;
     margin-inline: auto;
@@ -225,8 +220,6 @@ body {
 /****************************************************************************************/
 /****************************************************************************************/
 /* عناصر المنيو */
-
-
 
 .main-highlight {
     border: 3px solid #ffffff; /* لون ذهبي */
@@ -240,11 +233,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 14px 6px rgba(0, 0, 0, .2)
 }
-
-
 .main-highlight2 {
     border: 3px solid #ffffff; /* لون ذهبي */
-
     width: 96vw;
     margin: 0.1%;
     margin-top: 15px;
@@ -254,7 +244,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 14px 6px rgba(0, 0, 0, .2)
 }
-
 .main-header {
     color: var(--marquee);
     display: flex;
@@ -262,24 +251,20 @@ body {
     justify-content: space-between;
     align-items: center
 }
-
 .main-title {
     padding: 15px;
     font-weight: bold;
     font-size: 50px;
 }
-
 .main-arrow {
     font-size: 100px;
     padding-left: 15px;
     padding-top: 15px
 }
-
 .back,
 .next {
     cursor: pointer
 }
-
 .back:hover,
 .next:hover {
     color: var(--primaryColor)
@@ -333,13 +318,11 @@ body {
     margin: 20px auto;
     max-width: 1200px;
 }
-
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%;
 }
-
 .carousel-item {
     flex: 0 0 33.33%;
     text-align: center;
@@ -348,12 +331,10 @@ body {
     transform: translateY(20px);
     transition: all 0.5s ease;
 }
-
 .carousel-item.active {
     opacity: 1;
     transform: translateY(0);
 }
-
 .carousel-item img {
     width: 85%;
     border-radius: 15px;
@@ -362,40 +343,45 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .carousel-item.active img {
     transform: scale(1);
     box-shadow: 0 0 20px 5px rgb(255, 214, 143);
 }
-
 .carousel-item:not(.active) img {
     transform: scale(0.5);
     opacity: 0.5;
     border-radius: 80px;
 }
-
-.carousel-item p {
-    font-size: 0.2rem;
-    margin: 10px 0 0;
+.carousel-item:not(.active) p {
+    transform: scale(0.5);
+    opacity: 0.5;
+    font-size: 0.5rem;
     color: var(--whiteHeader);
     font-weight: bold;
 }
-
+.carousel-item p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--whiteHeader);
+    font-weight: bold;
+    white-space: nowrap;       /* يمنع النص من التخطي لسطر جديد */
+    overflow: hidden;          /* يخفي النص الزائد عن الحد */
+    text-overflow: ellipsis;   /* يضيف "..." إذا تجاوز النص المساحة */
+    display: block;           /* يجعل العنصر يأخذ عرضه الطبيعي */
+    max-width: 100%;          /* يحدد أقصى عرض للنص */
+}
 .carousel-item a {
     text-decoration: none;
     display: block;
 }
-
 /* Animation for items */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 .carousel-item {
     animation: fadeIn 0.5s ease forwards;
 }
-
 .carousel-item:nth-child(1) { animation-delay: 0.1s; }
 .carousel-item:nth-child(2) { animation-delay: 0.3s; }
 .carousel-item:nth-child(3) { animation-delay: 0.5s; }
@@ -404,7 +390,6 @@ body {
 .carousel-item:nth-child(6) { animation-delay: 0.11s; }
 .carousel-item:nth-child(7) { animation-delay: 0.13s; }
 .carousel-item:nth-child(8) { animation-delay: 0.15s; }
-
 
 /****************************************************************************************/
 /****************************************************************************************/
@@ -421,7 +406,6 @@ body {
     top: 10px; /* أو أي قيمة أخرى لتحديد المسافة من الأعلى */
     left: 10px; /* أو أي قيمة أخرى لتحديد المسافة من اليسار */
 }
-
 .highlight-wrapper {
     width: 100%;
     display: flex;
@@ -431,7 +415,6 @@ body {
     overflow-x: hidden;
     box-shadow: 0 0 14px 6px rgba(0, 0, 0, .2)
 }
-
 .highlight-card {
     display: flex;
     flex-direction: row;
@@ -441,7 +424,6 @@ body {
     background-color: var(--greyColor);
     cursor: pointer
 }
-
 .highlight-img {
     width: 350px;
     height: 350px;
@@ -449,31 +431,26 @@ body {
     object-fit: cover;
     object-position: center
 }
-
 .highlight-desc h4 {
     width: 100%;
     font-size: 60px;
     padding-top: 30px;
     color: var(--primaryColor)
 }
-
 .highlight-desc p {
     width: 100%;
     color: var(--blackColor);
     padding-top: 20px;
     font-size: 50px
 }
-
 .highlight-card:hover {
     background-color: var(--whiteColor);
     box-shadow: rgba(149, 157, 165, .2) 0 8px 24px
 }
-
 .total-menus {
     display: flex;
     justify-content: space-between
 }
-
 .menu-button {
     background-color: var(--seconderyColor);
     color: var(--blackColor);
@@ -487,11 +464,9 @@ body {
     text-align: center;
     box-shadow: 0 0 6px 5px rgba(0, 0, 0, .2)
 }
-
 .menu-button:hover {
     background-color: #FFC400
 }
-
 .main-filter {
     width: 48%;
     display: flex;
@@ -500,12 +475,10 @@ body {
     margin-top: 1.5rem;
     gap: 1rem
 }
-
 .back-menus,
 .next-menus {
     cursor: pointer
 }
-
 .back-menus:hover,
 .next-menus:hover {
     color: var(--primaryColor)
@@ -1157,6 +1130,8 @@ button {
 }
 
 .journey__card {
+    border: 3px solid #ffffff; /* لون ذهبي */
+
     position: relative;
     isolation: isolate;
     overflow: hidden;
@@ -1239,6 +1214,8 @@ button {
 /* event */
 
 .event__content {
+    border: 3px solid #ffffff; /* لون ذهبي */
+
     display: grid;
     gap: 2rem;
     padding: 1rem;
@@ -2151,7 +2128,7 @@ hr {
     }
 
     .carousel-item p {
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 1px;
         color: var(--whiteHeader);
         text-decoration: none;
