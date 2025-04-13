@@ -116,7 +116,7 @@ body {
     background-color: var(--softGreenColor) ;
     background-image: url("./images/اساسيات/backgraund.jpg"); 
     background-repeat: repeat;
-    background-size: 600px; 
+    background-size: 500px; 
     animation: moveBackground 30s linear infinite; 
     margin-left: 250px;
 }
