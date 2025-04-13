@@ -116,7 +116,7 @@ body {
     background-color: var(--softGreenColor) ;
     background-image: url("./images/اساسيات/backgraund.jpg"); 
     background-repeat: repeat;
-    background-size: 800px; 
+    background-size: 400px; 
     animation: moveBackground 30s linear infinite; 
     margin-left: 250px;
 }
@@ -143,7 +143,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primaryColor);
+    background-color: var(--softGreenColor);
     border-radius: 50px;
     padding: 20px;
     gap: 5px; /* المسافة بين العناصر */
@@ -1623,7 +1623,6 @@ hr {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--primaryColor);
         border-radius: 50px;
         padding: 2px;
         gap: 5px; /* المسافة بين العناصر */
@@ -2663,7 +2662,6 @@ hr {
         display: flex;
         justify-content: center; 
         align-items: center;
-        background-color: var(--primaryColor);
         border-radius: 30px;
         padding-right: 5px;
         padding-left: 5px;
