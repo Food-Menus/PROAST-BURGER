@@ -43,8 +43,9 @@ body {
     width: 100%;
     height: auto;
     display: flex;
-    background-color: var(--softGreenColor)
+    background-color: var(--softGreenColor);
 }
+
 
 /****************************************************************************************/
 /****************************************************************************************/
@@ -112,26 +113,12 @@ body {
     padding-top: 2%;
     padding-right: 2%;
     padding-left: 2%;
-
-
     background-color: var(--softGreenColor) ;
-
-    /* background: repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 10px, #e0e0e0 10px, #e0e0e0 20px); */
-
-
-    /* background: linear-gradient(45deg, #f0f0f0 25%, #e0e0e0 25%, #e0e0e0 50%, #f0f0f0 50%, #f0f0f0 75%, #e0e0e0 75%, #e0e0e0 100%);
-    background-size: 20px 20px;  */
-
-    /* background-image: url("your-pattern-image.png"); 
-    background-repeat: repeat;  */
-/* 
-    background-color: rgba(0, 0, 0, 0.5); 
-
-    background-image: url("./images/اساسيات/backgraund.png"); 
+    background-image: url("./images/اساسيات/backgraund.jpg"); 
     background-repeat: repeat;
-    animation: moveBackground 70s linear infinite;  */
-
-    margin-left: 250px
+    background-size: 600px; 
+    animation: moveBackground 30s linear infinite; 
+    margin-left: 250px;
 }
 
 @keyframes moveBackground {
