@@ -20,69 +20,132 @@
         width: 100%; /* يجعل الفوتر يمتد على كامل عرض الشاشة */
     }
     </style>
-    <style>
-      /* أنماط البطاقة المعاد تصميمها */
-      .dish-card {
-        width: 320px;
-        background: #fff;
-        border-radius: 15px;
-        margin: 20px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-        overflow: hidden;
-        font-family: 'Open Sans', sans-serif;
-      }
+  <style>
+    .dish-card-horizontal {
+      display: flex;
+      width: 100%;
+      max-width: 650px;
+      background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 1px solid #f0f0f0;
+      margin: 15px 0;
+  }
 
-      .dish-card:hover {
-        transform: translateY(-5px);
-      }
+  .dish-card-horizontal:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      border-color: #e0e0e0;
+  }
 
-      .card-header {
-        padding: 15px;
-        background: linear-gradient(135deg, #ff9a44 0%, #ff6b6b 100%);
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+  .image-container {
+      width: 45%;
+      min-width: 250px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+  }
 
-      .dish-name {
-        font-size: 20px;
-        font-weight: 700;
-        margin: 0;
-      }
+  .dish-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+  }
 
-      .price-tag {
-        font-size: 20px;
-        font-weight: 800;
-        background: rgba(255,255,255,0.2);
-        padding: 5px 15px;
-        border-radius: 25px;
-      }
+  .dish-card-horizontal:hover .dish-image {
+      transform: scale(1.03);
+  }
 
-      .dish-image {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-bottom: 3px solid #eee;
-      }
+  .card-content {
+      width: 55%;
+      padding: 5px 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
 
-      .dish-details {
-        padding: 15px;
-        color: #666;
-        line-height: 1.6;
-        font-size: 0.95rem;
-        background: #f9f9f9;
-      }
+  .text-content {
+      margin-bottom: 5px;
+  }
 
-      .dish-details::before {
-        content: "🟊 المكونات 🟊";
-        display: block;
-        color: #ff6b6b;
-        font-weight: bold;
-        margin-bottom: 10px;
+  .dish-name {
+      margin: 0 0 12px 0;
+      color: #2c3e50;
+      font-size: 1.5rem;
+      font-weight: 700;
+  }
+
+  .dish-details {
+      color: #7f8c8d;
+      font-size: 0.95rem;
+      line-height: 1.3;
+      margin-bottom: 0px;
+  }
+
+  .price-buttons {
+      display: flex;
+      gap: 12px;
+  }
+
+  .price-btn {
+      border: none;
+      padding: 5px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      flex: 1;
+      min-width: 120px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .price-btn.single {
+    background: linear-gradient(180deg, #e21f27 80%, #fbc2eb 100%);
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .price-btn.double {
+      background: linear-gradient(180deg, #febf10 80%, #fbc2eb 100%);
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .price-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .price-btn .price-label {
+      font-size: 0.85rem;
+      margin-bottom: 3px;
+  }
+
+  .price-btn .price-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+      .dish-card-horizontal {
+          flex-direction: column;
       }
-    </style>
+      
+      .image-container, .card-content {
+          width: 100%;
+      }
+      
+      .image-container {
+          height: 200px;
+      }
+  }
+  </style>
 </head>
 
 <body>
@@ -141,28 +204,42 @@
     drinksList.innerHTML = '';
 
     json.table.rows.forEach(row => {
-      const Food_Type = row.c[0] ? row.c[0].v : 'غير متوفر'; // نوع المشروب
-      const Food_Price = row.c[1] ? row.c[1].v : 'غير متوفر'; // سعر المشروب
-      const Food_Details = row.c[2] ? row.c[2].v : ''; // رابط الصورة
-      const Food_Image = row.c[3] ? row.c[3].v : ''; // رابط الصورة
+    const Food_Type = row.c[0]?.v || 'غير متوفر';
+    const Food_Price_Double = row.c[1]?.v || 'غير متوفر'; // سعر السينجل
+    const Food_Price_Single = row.c[2]?.v || 'غير متوفر'; // سعر الدابل
+    const Food_Details = row.c[3]?.v || '';
+    const Food_Image = row.c[4]?.v || '';
 
-      drinksList.innerHTML += `
-      <div  onclick="addToCart('${Food_Type}', '${Food_Price}')">
-        <div class="dish-card">
-          <img src="${Food_Image}" alt="${Food_Type}" class="dish-image">
-          <div class="card-header">
-            <h3 class="dish-name">${Food_Type}</h3>
-            <span class="price-tag">${Food_Price} ج.م</span>
-          </div>
-          <div class="dish-details">
-            ${Food_Details}
-          </div>
+    drinksList.innerHTML += `
+
+
+    <div class="dish-card-horizontal">
+        <div class="image-container">
+            <img src="${Food_Image}" alt="${Food_Type}" class="dish-image">
         </div>
-      </div>
-
-
-      `;
-    });
+        <div class="card-content">
+            <div class="text-content">
+                <h3 class="dish-name">${Food_Type}</h3>
+                <div class="dish-details">
+                    ${Food_Details}
+                </div>
+            </div>
+            <div class="price-buttons">
+                <button class="price-btn single" onclick="addToCart('${Food_Type} - سينجل', '${Food_Price_Single}')">
+                    <span class="price-label">وجبة فردية</span>
+                    <span class="price-value">${Food_Price_Single} ج.م</span>
+                </button>
+                <button class="price-btn double" onclick="addToCart('${Food_Type} - دابل', '${Food_Price_Double}')">
+                    <span class="price-label">وجبة مزدوجة</span>
+                    <span class="price-value">${Food_Price_Double} ج.م</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+    `;
+});
   }
 
   function addToCart(Food_Type, Food_Price) {
