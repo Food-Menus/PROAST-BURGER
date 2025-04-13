@@ -115,7 +115,7 @@ body {
     background-image: url("./images/اساسيات/backgraund.jpg"); 
     background-repeat: repeat;
     background-size: 400px; /* زيادة حجم الصورة لتقليل التكرار المرئي */
-    animation: moveBackground 50s linear infinite; /* زيادة مدة الحركة */
+    animation: moveBackground 150s linear infinite; /* زيادة مدة الحركة */
     margin-left: 250px;
 }
 
