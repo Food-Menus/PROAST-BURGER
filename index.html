@@ -56,10 +56,10 @@
         <div class="main-highlight2">
 
 
-        <div class="marquee-container"  style="border-radius: 7px;" >
+        <!-- <div class="marquee-container"  style="border-radius: 7px;" >
             <div class="marquee-content" >
             </div>
-        </div>
+        </div> -->
 
         <marquee direction="right" class="marquee"> <p id="marquee" scrollamount="10s"> </p>
         </marquee>
@@ -432,32 +432,32 @@ updateCarousel();
 //**********************************************************************************************//
 //**  marquee-content  **//
 
-    const marqueeContent = document.querySelector('.marquee-content');
-    const images = [
-    './Static/images/صور الشريط/111.jpg',
-    './Static/images/صور الشريط/222.jpg',
-    './Static/images/صور الشريط/333.jpg',
-    './Static/images/صور الشريط/444.jpg',
-    './Static/images/صور الشريط/555.jpg',
-    './Static/images/صور الشريط/666.jpg',
-    './Static/images/صور الشريط/777.jpg',
-    './Static/images/صور الشريط/888.jpg',
-    './Static/images/صور الشريط/999.jpg',
-    ];
+    // const marqueeContent = document.querySelector('.marquee-content');
+    // const images = [
+    // './Static/images/صور الشريط/111.jpg',
+    // './Static/images/صور الشريط/222.jpg',
+    // './Static/images/صور الشريط/333.jpg',
+    // './Static/images/صور الشريط/444.jpg',
+    // './Static/images/صور الشريط/555.jpg',
+    // './Static/images/صور الشريط/666.jpg',
+    // './Static/images/صور الشريط/777.jpg',
+    // './Static/images/صور الشريط/888.jpg',
+    // './Static/images/صور الشريط/999.jpg',
+    // ];
 
-    // إنشاء نسخة متكررة من الصور
-    for (let i = 0; i < 10; i++) { // يمكنك تغيير عدد التكرارات حسب الحاجة
-    images.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        marqueeContent.appendChild(img);
-    });
-    }
+    // // إنشاء نسخة متكررة من الصور
+    // for (let i = 0; i < 10; i++) { // يمكنك تغيير عدد التكرارات حسب الحاجة
+    // images.forEach(src => {
+    //     const img = document.createElement('img');
+    //     img.src = src;
+    //     marqueeContent.appendChild(img);
+    // });
+    // }
 
-    // تعديل سرعة الحركة بناءً على عدد الصور
-    const totalImages = marqueeContent.querySelectorAll('img').length;
-    const animationDuration = totalImages * 10; // يمكنك تعديل 0.5 لتغيير السرعة
-    marqueeContent.style.animationDuration = `${animationDuration}s`;
+    // // تعديل سرعة الحركة بناءً على عدد الصور
+    // const totalImages = marqueeContent.querySelectorAll('img').length;
+    // const animationDuration = totalImages * 10; // يمكنك تعديل 0.5 لتغيير السرعة
+    // marqueeContent.style.animationDuration = `${animationDuration}s`;
 
 
 //**********************************************************************************************//
