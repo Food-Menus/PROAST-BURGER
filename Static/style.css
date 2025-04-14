@@ -1533,7 +1533,6 @@ hr {
 .dish-card-horizontal {
     display: flex;
     width: 100%;
-    max-width: 650px;
     background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
     border-radius: 15px;
     overflow: hidden;
@@ -1583,13 +1582,13 @@ hr {
 .dish-name {
     margin: 0 0 12px 0;
     color: #2c3e50;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
 .dish-details {
     color: #7f8c8d;
-    font-size: 0.95rem;
+    font-size: 1.95rem;
     line-height: 1.3;
     margin-bottom: 0px;
 }
@@ -1634,7 +1633,7 @@ hr {
 }
 
 .price-btn .price-label {
-    font-size: 0.85rem;
+    font-size: 1.85rem;
     margin-bottom: 3px;
 }
 
@@ -2388,6 +2387,30 @@ hr {
 
 @media screen and (max-width:700px) {
 
+
+    .dish-name {
+        margin: 0 0 12px 0;
+        color: #2c3e50;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+    .dish-details {
+        color: #7f8c8d;
+        font-size: 0.95rem;
+        line-height: 1.3;
+        margin-bottom: 0px;
+    }
+    
+    .price-btn .price-label {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+    }
+
+    .price-btn .price-value {
+        font-size: 0.95rem;
+        font-weight: 700;
+    }
  
     /* إخفاء النصوص تماماً */
     .text-right,
