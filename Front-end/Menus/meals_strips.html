@@ -19,7 +19,7 @@
         bottom: 0; /* يضع الفوتر في أسفل الشاشة */
         width: 100%; /* يجعل الفوتر يمتد على كامل عرض الشاشة */
     }
-</style>
+    </style>
 
 </head>
 
@@ -47,7 +47,7 @@
 
   <Code>
     <section class="section__container order__container" id="menu">
-      <h2 class="section__header" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding-bottom:15px;"> قائمة سندوتشات الدجاج </h2><br>
+      <h2 class="section__header" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding-bottom:15px;"> قائمة وجبات الاستربس </h2><br>
       <p class="section__description" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding: 15px;  padding-bottom:15px;"> اختر ما تحب </p>      
     </section>
     <div id="drinks-list" ></div>
@@ -68,7 +68,7 @@
   //**********************************************************************************************//
   //**  git data & add cart  **//
 
-  const sheetID = '1uue-DPnhT-s9aRbJcbzClq_pkRm7cCK0IOZlNcWtHOM'; // معرف جدول جوجل
+  const sheetID = '1vy-kvQeUe5lU3xqa7BZQqMvRGwgJkRFSiXc3DqrQJ5g'; // معرف جدول جوجل
   const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json`;
 
   async function fetchDrinks() {
@@ -80,10 +80,9 @@
 
     json.table.rows.forEach(row => {
     const Food_Type = row.c[0]?.v || 'غير متوفر';
-    const Food_Price_Double = row.c[1]?.v || 'غير متوفر'; // سعر السينجل
-    const Food_Price_Single = row.c[2]?.v || 'غير متوفر'; // سعر الدابل
-    const Food_Details = row.c[3]?.v || '';
-    const Food_Image = row.c[4]?.v || '';
+    const Food_Price_Single = row.c[1]?.v || 'غير متوفر'; // سعر الدابل
+    const Food_Details = row.c[2]?.v || '';
+    const Food_Image = row.c[3]?.v || '';
 
     drinksList.innerHTML += `
 
@@ -104,10 +103,6 @@
                     <span class="price-label">وجبة فردية</span>
                     <span class="price-value">${Food_Price_Single} ج.م</span>
                 </button>
-                <button class="price-btn double" onclick="addToCart('${Food_Type} - دابل', '${Food_Price_Double}')">
-                    <span class="price-label">وجبة مزدوجة</span>
-                    <span class="price-value">${Food_Price_Double} ج.م</span>
-                </button>
             </div>
         </div>
     </div>
@@ -116,6 +111,7 @@
     `;
 });
   }
+
 
   function addToCart(Food_Type, Food_Price) {
     // الحصول على العناصر الموجودة في الكارت

@@ -19,7 +19,7 @@
         bottom: 0; /* يضع الفوتر في أسفل الشاشة */
         width: 100%; /* يجعل الفوتر يمتد على كامل عرض الشاشة */
     }
-</style>
+  </style>
 
 </head>
 
@@ -47,7 +47,7 @@
 
   <Code>
     <section class="section__container order__container" id="menu">
-      <h2 class="section__header" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding-bottom:15px;"> قائمة سندوتشات الدجاج </h2><br>
+      <h2 class="section__header" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding-bottom:15px;"> قثامة وجبات الاطفال </h2><br>
       <p class="section__description" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding: 15px;  padding-bottom:15px;"> اختر ما تحب </p>      
     </section>
     <div id="drinks-list" ></div>
@@ -68,7 +68,7 @@
   //**********************************************************************************************//
   //**  git data & add cart  **//
 
-  const sheetID = '1uue-DPnhT-s9aRbJcbzClq_pkRm7cCK0IOZlNcWtHOM'; // معرف جدول جوجل
+  const sheetID = '1P4oV4NhTgH6IOzQrQ17kZ29RItNCx6r1dkGfAou9RHo'; // معرف جدول جوجل
   const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json`;
 
   async function fetchDrinks() {
@@ -100,11 +100,11 @@
                 </div>
             </div>
             <div class="price-buttons">
-                <button class="price-btn single" onclick="addToCart('${Food_Type} - سينجل', '${Food_Price_Single}')">
+                <button class="price-btn single" onclick="addToCart('${Food_Type} - بدون اللعبة', '${Food_Price_Single}')">
                     <span class="price-label">وجبة فردية</span>
                     <span class="price-value">${Food_Price_Single} ج.م</span>
                 </button>
-                <button class="price-btn double" onclick="addToCart('${Food_Type} - دابل', '${Food_Price_Double}')">
+                <button class="price-btn double" onclick="addToCart('${Food_Type} - مع اللعبة', '${Food_Price_Double}')">
                     <span class="price-label">وجبة مزدوجة</span>
                     <span class="price-value">${Food_Price_Double} ج.م</span>
                 </button>

@@ -19,7 +19,8 @@
         bottom: 0; /* يضع الفوتر في أسفل الشاشة */
         width: 100%; /* يجعل الفوتر يمتد على كامل عرض الشاشة */
     }
-    </style></head>
+    </style>
+    </head>
 
 <body>
 <!--*************************************************************************************************-->
@@ -48,53 +49,61 @@
         <h1 class="title-ordero" style="text-align: center; background-color: rgba(0, 0, 0, 0.716); border-radius: 15px; color: white; padding-top: 15px;  padding-bottom: 15px; margin: 15px;"> أدخل رأيك </h1>
 
         <form id="submit-to-google-sheet">
-            
             <div class="form-group">
-            <input
-                class="form-control"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="ادخل اسمك"
-                required
-            />
+                <input
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="ادخل اسمك"
+                    required
+                />
             </div>
-
+        
             <div class="form-group">
-            <input
-                class="form-control"
-                type="text"
-                name="feedback"
-                id="feedback"
-                placeholder="ادخل رأيك في الخدمة"
-                required
-            />
+                <input
+                    class="form-control"
+                    type="text"
+                    name="feedback"
+                    id="feedback"
+                    placeholder="ادخل رأيك في الخدمة"
+                    required
+                />
             </div>
-
+        
             <div class="form-group">
-            <input
-                class="form-control"
-                type="text"
-                name="number"
-                id="number"
-                placeholder="ادخل رقم هاتفك"
-                required
-            />
+                <input
+                    class="form-control"
+                    type="tel"
+                    name="number"
+                    id="number"
+                    placeholder="ادخل رقم هاتفك"
+                    required
+                    pattern="[0-9]{10,15}"
+                    title="يجب أن يحتوي على أرقام فقط (10-15 رقم)"
+                />
             </div>
-
+        
             <div class="form-group">
-            <select class="form-control" name="condition" id="condition" required>
-                <option value="سعيد بالخدمة">سعيد بالخدمة</option>
-                <option value="راضي عن الخدمة">راضي عن الخدمة</option>
-                <option value="خدمة مقبولة">خدمة مقبولة</option>
-                <option value="خدمة غير جيدة">خدمة غير جيدة</option>
-                <option value="خدمة سيئة">خدمة سيئة</option>
-            </select>
+                <select class="form-control" name="condition" id="condition" required>
+                    <option value="" disabled selected>اختر تقييمك للخدمة</option>
+                    <option value="سعيد بالخدمة">سعيد بالخدمة</option>
+                    <option value="راضي عن الخدمة">راضي عن الخدمة</option>
+                    <option value="خدمة مقبولة">خدمة مقبولة</option>
+                    <option value="خدمة غير جيدة">خدمة غير جيدة</option>
+                    <option value="خدمة سيئة">خدمة سيئة</option>
+                </select>
             </div>
-            <br>
-
-            <button type="submit" class="WhatsApp"> <h2>أرسال</h2> </button>
+        
+            <button type="submit" class="submit-btn" id="submit-btn">
+                <h2 id="btn-text">إرسال</h2>
+                <div id="loading-spinner" style="display: none;">
+                    <span style="margin-left: 5px;">جاري الإرسال...</span>
+                    <!-- يمكنك إضافة أيقونة تحميل هنا -->
+                </div>
+            </button>
         </form>
+
     </Code>
    
 
@@ -110,21 +119,47 @@
     //**********************************************************************************************//
     //**********************************************************************************************//
     //**  post data  **//
+    const form = document.getElementById('submit-to-google-sheet');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const loadingSpinner = document.getElementById('loading-spinner');
 
-        const scriptURL = "https://script.google.com/macros/s/AKfycbySDOrdAj5PDJu1PnJsfcnFpYkcBASsNdDe7fA5fqaKodLxD5TulzIi_mCh7Jz3ZQ/exec";
-        const form = document.forms["submit-to-google-sheet"];
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          var formData = new FormData(form);
-  
-          fetch(scriptURL, { method: "POST", body: formData })
-            .then((response) => {
-              swal("Done", "Submitted Successfully.", "success");
-            })
-            .catch((error) => {
-              swal("Error", "Something went wrong. please try again!", "error");
-            });
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // تعطيل الزر وإظهار رسالة التحميل
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        loadingSpinner.style.display = 'block';
+        
+        // هنا تضع كود الإرسال إلى جوجل شيت
+        // مثال:
+        const formData = new FormData(form);
+        
+        fetch('https://script.google.com/macros/s/AKfycbxGZF4BmuxSGIJcMmmpPL3eHTfVQQY-il5cCcn5E9TN6F20BC90EUPk9taklyNg9cHr/exec', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if(response.ok) {
+                // إعادة تعيين النموذج بعد الإرسال
+                form.reset();
+                swal("Done", "تم ارسال الفيد باك بنجاح", "تم الارسال ");
+            } else {
+                throw new Error('فشل في الإرسال');
+            }
+        })
+        .catch(error => {
+            swal("Error", "حدث خطأ يرجى المحاولة مرة اخرى", "حدث خطأ");
+        })
+        .finally(() => {
+            // إعادة تمكين الزر وإخفاء رسالة التحميل
+            submitBtn.disabled = false;
+            btnText.style.display = 'block';
+            loadingSpinner.style.display = 'none';
         });
+    });
+
     //**********************************************************************************************//
     //**********************************************************************************************//
     //**  loadingScreen  **//
