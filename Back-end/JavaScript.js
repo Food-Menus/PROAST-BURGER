@@ -1,7 +1,7 @@
 function openWhatsApp() {
   const name = document.getElementById("name").value;
   const adress = document.getElementById("adress").value;
-  const phoneNumber = "+201147182463";
+  const phoneNumber = "+201150020201";
   const storedData = localStorage.getItem("userData");
   const dishes = JSON.parse(storedData);
   let message = `أهلاً، اسمي ${name} وأود طلب:\n`;
